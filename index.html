@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Portfolio | Modern UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-decoration"></div>
+    <div class="bg-decoration-2"></div>
+
+    <nav class="navbar">
+        <div class="logo">Porto<span>Folio</span></div>
+        <ul class="nav-links">
+            <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('projects')">Project</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="card active">
+            <header>
+                <div class="profile-img">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Profile">
+                </div>
+                <h1>Irfan Ramadhan</h1>
+                <p class="tagline">Fullstack Web Developer</p>
+            </header>
+            <main>
+                <div class="section-box">
+                    <h3>Tentang Saya</h3>
+                    <p>Membangun solusi digital dengan kode yang bersih dan desain yang user-friendly. Sedang mendalami dunia Web Development.</p>
+                </div>
+                <div class="section-box">
+                    <h3>Keahlian</h3>
+                    <div class="skills-grid">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>Node.js</span>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <a href="mailto:emailkamu@gmail.com" class="btn-contact">Hubungi Saya</a>
+            </footer>
+        </section>
+
+        <section id="projects" class="card" style="display: none;">
+            <div class="section-header">
+                <h2>Project Saya</h2>
+                <p>Koleksi karya terbaik yang telah saya buat.</p>
+            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-info">
+                        <h4>E-Commerce App</h4>
+                        <p>Aplikasi toko online berbasis web.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h4>Management System</h4>
+                        <p>Sistem pencatatan data inventaris barang.</p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showSection('home')" class="btn-back">← Kembali ke Profil</button>
+        </section>
+    </div>
+
+    <script>
+        function showSection(id) {
+            // Sembunyikan semua section dengan animasi fade out
+            const sections = document.querySelectorAll('.card');
+            sections.forEach(s => {
+                s.style.display = 'none';
+            });
+            
+            // Tampilkan section yang dipilih
+            const activeSection = document.getElementById(id);
+            activeSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
