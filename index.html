@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Portfolio | Irfan Ramadhan</title>
+    <title>Premium Portfolio | Modern UI</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,7 +25,7 @@
                 <div class="profile-img">
                     <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Profile">
                 </div>
-                <h1>Irfan Ramadhan</h1>
+                <h1>Nama Lengkap Kamu</h1>
                 <p class="tagline">Fullstack Web Developer</p>
             </header>
             <main>
@@ -51,24 +51,18 @@
                 <p>Koleksi karya terbaik yang telah saya buat.</p>
             </div>
             <div class="project-list">
-                
-                <a href="https://iwanthecreator-blip.github.io/toko-online-comel/" target="_blank" class="project-link">
-                    <div class="project-item">
-                        <div class="project-info">
-                            <h4>E-Commerce App (E-Comel)</h4>
-                            <p>Aplikasi toko online berbasis web dengan fitur keranjang.</p>
-                            <small style="color: var(--accent);">Lihat Live Demo &rarr;</small>
-                        </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h4>E-Commerce App</h4>
+                        <p>Aplikasi toko online berbasis web.</p>
                     </div>
-                </a>
-
+                </div>
                 <div class="project-item">
                     <div class="project-info">
                         <h4>Management System</h4>
                         <p>Sistem pencatatan data inventaris barang.</p>
                     </div>
                 </div>
-
             </div>
             <button onclick="showSection('home')" class="btn-back">← Kembali ke Profil</button>
         </section>
@@ -76,11 +70,13 @@
 
     <script>
         function showSection(id) {
+            // Sembunyikan semua section dengan animasi fade out
             const sections = document.querySelectorAll('.card');
             sections.forEach(s => {
                 s.style.display = 'none';
             });
             
+            // Tampilkan section yang dipilih
             const activeSection = document.getElementById(id);
             activeSection.style.display = 'block';
         }
