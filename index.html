@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Portfolio | Modern UI</title>
+    <title>Irfan Ramadhan | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,76 +13,124 @@
     <div class="bg-decoration-2"></div>
 
     <nav class="navbar">
-        <div class="logo">Porto<span>Folio</span></div>
+        <div class="logo">Irfan<span>.Dev</span></div>
         <ul class="nav-links">
-            <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
-            <li><a href="javascript:void(0)" onclick="showSection('projects')">Project</a></li>
+            <li><a href="#" class="nav-item active" onclick="showSection('home', this)">Home</a></li>
+            <li><a href="#" class="nav-item" onclick="showSection('projects', this)">Project</a></li>
+            <li><a href="#" class="nav-item" onclick="showSection('contact', this)">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <section id="home" class="card active">
+        <section id="home" class="card active-section">
             <header>
                 <div class="profile-img">
-                    <img src="img/IMG-20251227-WA0026.jpeg" alt="Profile">
+                    <img src="img/IMG-20251227-WA0026.jpeg" alt="Irfan Ramadhan">
                 </div>
                 <h1>Irfan Ramadhan</h1>
                 <p class="tagline">Fullstack Web Developer</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </header>
+            
             <main>
                 <div class="section-box">
-                    <h3>Tentang Saya</h3>
-                    <p>Membangun solusi digital dengan kode yang bersih dan desain yang user-friendly. Sedang mendalami dunia Web Development.</p>
+                    <h3><i class="fas fa-user-tie"></i> Tentang Saya</h3>
+                    <p>Membangun solusi digital dengan kode yang bersih dan desain yang user-friendly. Berfokus pada pengembangan aplikasi web modern yang skalabel.</p>
                 </div>
+                
                 <div class="section-box">
-                    <h3>Keahlian</h3>
+                    <h3><i class="fas fa-code"></i> Keahlian</h3>
                     <div class="skills-grid">
-                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>Node.js</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Git</span>
                     </div>
                 </div>
             </main>
+            
             <footer>
-                <a href="mailto:emailkamu@gmail.com" class="btn-contact">Hubungi Saya</a>
+                <button onclick="showSection('projects')" class="btn-primary">Lihat Project <i class="fas fa-arrow-right"></i></button>
             </footer>
         </section>
 
         <section id="projects" class="card" style="display: none;">
             <div class="section-header">
                 <h2>Project Saya</h2>
-                <p>Koleksi karya terbaik yang telah saya buat.</p>
+                <p>Karya digital yang telah saya kembangkan.</p>
             </div>
+            
             <div class="project-list">
-    <a href="https://iwanthecreator-blip.github.io/toko-online-comel/" target="_blank" style="text-decoration: none; color: inherit;">
-        <div class="project-item">
-            <div class="project-info">
-                <h4>E-Commerce App (E-Comel)</h4>
-                <p>Aplikasi toko online berbasis web. <span style="color: var(--accent);">Lihat Live &rarr;</span></p>
-            </div>
-        </div>
-    </a>
+                <a href="https://iwanthecreator-blip.github.io/toko-online-comel/" target="_blank" class="project-link">
+                    <div class="project-item">
+                        <div class="project-info">
+                            <h4><i class="fas fa-shopping-cart"></i> E-Comel</h4>
+                            <p>Aplikasi toko online responsif dengan fitur keranjang belanja.</p>
+                            <span class="live-link">Lihat Live &rarr;</span>
+                        </div>
+                    </div>
+                </a>
 
-    <div class="project-item">
-        <div class="project-info">
-            <h4>Management System</h4>
-            <p>Sistem pencatatan data inventaris barang.</p>
-        </div>
-    </div>
-</div>
-            <button onclick="showSection('home')" class="btn-back">← Kembali ke Profil</button>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h4><i class="fas fa-boxes-stacked"></i> Inventory System</h4>
+                        <p>Sistem manajemen stok barang berbasis cloud (In Development).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="showSection('home')" class="btn-back">← Kembali</button>
+        </section>
+
+        <section id="contact" class="card" style="display: none;">
+            <div class="section-header">
+                <h2>Hubungi Saya</h2>
+                <p>Mari berkolaborasi atau sekadar menyapa.</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:emailkamu@gmail.com" class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://wa.me/628xxxxxx" class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+            <button onclick="showSection('home')" class="btn-back">← Kembali</button>
         </section>
     </div>
 
     <script>
-        function showSection(id) {
-            // Sembunyikan semua section dengan animasi fade out
+        function showSection(id, element) {
+            // 1. Sembunyikan semua section
             const sections = document.querySelectorAll('.card');
             sections.forEach(s => {
                 s.style.display = 'none';
+                s.classList.remove('active-section');
             });
-            
-            // Tampilkan section yang dipilih
+
+            // 2. Tampilkan section yang dituju
             const activeSection = document.getElementById(id);
             activeSection.style.display = 'block';
+            
+            // Tambahkan sedikit delay untuk animasi masuk (opsional via CSS)
+            setTimeout(() => {
+                activeSection.classList.add('active-section');
+            }, 10);
+
+            // 3. Update status active pada Navbar
+            if(element) {
+                const navLinks = document.querySelectorAll('.nav-item');
+                navLinks.forEach(link => link.classList.remove('active'));
+                element.classList.add('active');
+            }
         }
     </script>
 </body>
